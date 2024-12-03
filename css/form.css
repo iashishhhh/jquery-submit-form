@@ -9,12 +9,12 @@
 }
 
 .container-fluid {
-
     background-image: linear-gradient(rgba(4, 23, 65, 0.76), rgba(4, 23, 65, 0.76)), url('bg-img/bg-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: fit-content;
+    height: auto;
+    padding-top: 31px;
 }
 
 
@@ -24,7 +24,7 @@
 }
 
 input {
-    border: 2px black solid;
+    border: none;
     font-weight: normal;
     background-color: rgba(255, 255, 255, 0.637);
 }
@@ -40,7 +40,87 @@ input {
     color: rgb(0, 0, 0);
     width: 10rem;
     height: 50px;
-    font-weight:600;
+    font-weight: 600;
     border-radius: 10px;
     border: none;
+}
+
+
+
+
+#rangeValue {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.range {
+    -webkit-appearance: none;
+    /* Remove default styling */
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: none;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Slider thumb */
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    outline: yellow;
+    border: yellow 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    /* background: yellow; */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide progress bar in Firefox */
+.range::-moz-range-track {
+    background: none;
+}
+
+/* Hide the progress bar in IE */
+.range::-ms-track {
+    background: none;
+    border: 0;
+    color: transparent;
+}
+
+/* Fix for IE's thumb */
+.range::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    /* background: yellow; */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/*  */
+input:not(.range):focus,
+input:not(.range):active,
+select:focus,
+select:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
