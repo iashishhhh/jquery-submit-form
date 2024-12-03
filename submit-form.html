@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
     <meta charset="UTF-8">
@@ -11,48 +11,91 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/form.css">
+    <script src="js/style.js"></script>
+
+    <link rel="stylesheet" href="css/form.css">
+    <!-- roboto font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container ">
-        <div class="text-center mt-2 pt-2">
-            <img src="img/download.png" style="height: 100px; " class="border rounded-circle logo " alt="">
-        </div>
-        <h1 class="text-center"> On-Site Inquiries</h1>
-        <div class="row">
-            <div class="col-12">
-                <label for="Name" class="fw-bold">Name <span style="color: red; font-weight: bold;">*</span></label>
-                <br>
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
+    <div class="container-fluid py-5">
+        <div class="container  pt-5 py-5 mb-2 text-white ">
+            <div class="text-center mt-2 pt-2">
+                <img src="img/download.png" style="height: 100px; " class=" rounded-circle logo " alt="">
             </div>
-            <div class="col-12 mt-5 pt-5">
-                <label for="Name" class="fw-bold">Where are You?<span
-                        style="color: red; font-weight: bold;">*</span></label>
-                <br>
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
-                <span class="fw-normal">Street Address</span>
-            </div>
-            <div class="col-12 mt-3">
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
-                <span class="fw-normal">Address Line 2</span>
-            </div>
-            <div class="col-6 mt-2">
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
-                <span class="fw-normal">City</span>
-            </div>
-            <div class="col-6 mt-2">
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
-                <span class="fw-normal">State/Region/province</span>
-            </div>
-            <div class="col-6 mt-2">
-                <input type="Name" class="w-100 rounded mt-2" style="height: 50px;" required>
-                <span class="fw-normal">Postal/Zip Code</span>
-            </div>
+            <h1 class="text-center"> On-Site Inquiries</h1>
+            <form action="">
+                <div class="row">
+                    <div class="col-12 ">
+                        <label for="Name" class="fw-bold ps-1">Name <span
+                                style="color: red; font-weight: bold;">*</span></label>
+                        <br>
+                        <input type="Name" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
+                    </div>
+                    <div class="col-12 mt-5 pt-4">
+                        <label for="Name" class="fw-bold " style="font-size: 30px;">Where are You?<span
+                                style="color: red; font-weight: bold;">*</span></label>
+                        <br>
+                        <input type="Name" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
+                        <span class="fw-normal ps-1">Street Address</span>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="Name" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
+                        <span class="fw-normal ps-1">Address Line 2</span>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <input type="Name" class="w-100 rounded mt-2  px-3" style="height: 50px;" required>
+                        <span class="fw-normal ps-1">City</span>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <input type="Name" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
+                        <span class="fw-normal ps-1">State/Region/province</span>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <input type="code" class="w-100 rounded mt-2 px-3" min="6" max="8" style="height: 50px;"
+                            required>
+                        <span class="fw-normal ps-1">Postal/Zip Code</span>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <select id="country" class="w-100 rounded mt-2 select " style="height: 50px;" required>
+                            <option value="" disabled selected>-Select-</option>
+                            <option value="india">India</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="Russia">Russia</option>
+                        </select>
+                    </div>
+                    <div class="col-12 mt-4 pt-4">
+                        <h1>What's the progress status? <span style="color: red; font-weight: bold;">*</span></h1>
+                    </div>
 
-        </div>
+                    <div class="col-12 mt-4">
+                        <input type="range" class="w-100" style="height: 50px;" id="slider-digs" min="0" max="100"
+                            value="0" oninput="updateProgress('progress-digs', this.value)" />
 
+                    </div>
+
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btnn">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <script>
+        function updateProgress(barId, value) {
+            const progressBar = document.getElementById(barId);
+            progressBar.style.width = value + '%';
+        }
+    </script>
+
 </body>
 
 </html>
