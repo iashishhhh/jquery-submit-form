@@ -1,5 +1,7 @@
 * {
     margin: 0%;
+    top: 0%;
+    bottom: 0%;
     padding: 0%;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
@@ -9,12 +11,12 @@
 }
 
 .container-fluid {
-    background-image: linear-gradient(rgba(4, 23, 65, 0.76), rgba(4, 23, 65, 0.76)), url('bg-img/bg-2.jpg');
+    background-image: linear-gradient(rgba(4, 23, 65, 0.76), rgba(5, 18, 46, 0.866)), url('bg-img/bg-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: auto;
-    padding-top: 31px;
+    padding-top: 35px;
 }
 
 
@@ -55,8 +57,6 @@ input {
 }
 
 .range {
-    -webkit-appearance: none;
-    /* Remove default styling */
     appearance: none;
     width: 100%;
     height: 8px;
@@ -72,7 +72,6 @@ input {
     width: 30px;
     height: 30px;
     background-color: rgb(255, 255, 255);
-    outline: yellow;
     border: yellow 2px solid;
     border-radius: 50%;
     cursor: pointer;
@@ -89,23 +88,19 @@ input {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide progress bar in Firefox */
 .range::-moz-range-track {
     background: none;
 }
 
-/* Hide the progress bar in IE */
 .range::-ms-track {
     background: none;
     border: 0;
     color: transparent;
 }
 
-/* Fix for IE's thumb */
 .range::-ms-thumb {
     width: 20px;
     height: 20px;
-    /* background: yellow; */
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -115,9 +110,9 @@ input {
 
 
 
-/*  */
-input:not(.range):focus,
-input:not(.range):active,
+/* input border none css.... */
+input:focus,
+input:active,
 select:focus,
 select:active {
     outline: none;

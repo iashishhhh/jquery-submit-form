@@ -22,45 +22,45 @@
 
 <body>
     <div class="container-fluid ">
-        <div class="container pt-2   py-5  text-white">
-            <div class="text-center">
-                <img src="img/download.png" style="height: 100px;" class="rounded-circle logo" alt="">
+        <div class="container pt-1   py-5  text-white">
+            <div class="text-center ">
+                <img src="img/download.png" style="height: 100px;" class="rounded-circle logo " alt="">
             </div>
             <h1 class="text-center">On-Site Inquiries</h1>
             <form id="inquiryForm">
                 <div class="row mx-5">
-                    <div class="col-12">
+                    <div class="col-lg-12 col-sm-12">
                         <label for="name" class="fw-bold ps-1" style="font-size: 20px;">Name <span
                                 style="color: red; font-weight: bold;">*</span></label>
                         <br>
                         <input type="text" id="name" class="w-100 rounded mt-1 px-3" style="height: 50px;" required>
                     </div>
-                    <div class="col-12 mt-3 pt-4">
+                    <div class="col-lg-12 col-sm-12 mt-3 pt-4">
                         <label for="location" class="fw-bold" style="font-size: 20px;">Where are You?<span
                                 style="color: red; font-weight: bold;">*</span></label>
                         <br>
                         <input type="text" id="location" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
                         <span class="fw-normal ps-1">Street Address</span>
                     </div>
-                    <div class="col-12 mt-3">
+                    <div class="col-lg-12 col-sm-12 mt-3">
                         <input type="text" id="addressLine2" class="w-100 rounded mt-2 px-3" style="height: 50px;"
                             required>
                         <span class="fw-normal ps-1">Address Line 2</span>
                     </div>
-                    <div class="col-6 mt-2">
+                    <div class="col-lg-6 col-sm-12 mt-2">
                         <input type="text" id="city" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
                         <span class="fw-normal ps-1">City</span>
                     </div>
-                    <div class="col-6 mt-2">
+                    <div class="col-lg-6 col-sm-12 mt-2">
                         <input type="text" id="state" class="w-100 rounded mt-2 px-3" style="height: 50px;" required>
                         <span class="fw-normal ps-1">State/Region/province</span>
                     </div>
-                    <div class="col-6 mt-2">
+                    <div class="col-lg-6 col-sm-12 mt-2">
                         <input type="text" id="postalCode" class="w-100 rounded mt-2 px-3" min="6" max="8"
                             style="height: 50px;" required>
                         <span class="fw-normal ps-1">Postal/Zip Code</span>
                     </div>
-                    <div class="col-6 mt-2">
+                    <div class="col-lg-6 col-sm-12 mt-2">
                         <select id="country" class="form-select mt-2 select" style="height: 50px;" required>
                             <option value="" selected>-Select-</option>
                             <option value="india">India</option>
@@ -72,12 +72,14 @@
                         </select>
                     </div>
 
-                    <div class="col-12 mt-3 pt-3">
+                    <div class="col-lg-12 col-sm-12 mt-3 pt-3">
                         <h1 style="font-size: 20px;">What's the progress status? <span
                                 style="color: red; font-weight: bold;">*</span></h1>
                     </div>
-                    <div class="col-12 ">
+
+                    <div class="col-lg-12 col-sm-12 ">
                         <input class="range bg-light" type="range" value="0" min="0" max="100" />
+
                     </div>
                 </div>
                 <div class="text-center mt-3 ">

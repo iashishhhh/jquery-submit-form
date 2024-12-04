@@ -6,6 +6,7 @@ $(document).ready(function () {
         console.log(value + '%'); // Log value to console
     });
 });
+
 // form submit with jq
 $(document).ready(function () {
     $('#inquiryForm').submit(function (event) {
