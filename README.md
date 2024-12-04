@@ -1,2 +1,2 @@
 # jquery-submit-form
-<img src="img/download.png">
+<img src="img/jQuery.png">
