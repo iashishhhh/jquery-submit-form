@@ -1,16 +1,6 @@
 $(document).ready(function () {
-    // Progress bar update
-    $('.range').on('input', function () {
-        const value = $(this).val(); // Get slider value
-        $('.progress-bar').css('width', value + '%'); // Update progress bar width
-        console.log(value + '%'); // Log value to console
-    });
-});
-
-// form submit with jq
-$(document).ready(function () {
     $('#inquiryForm').submit(function (event) {
-        event.preventDefault(); // Prevents the default form submission
+        event.preventDefault(); // Prevent default form submission behavior
 
         // Collect form data
         const formData = {
@@ -21,13 +11,22 @@ $(document).ready(function () {
             state: $('#state').val(),
             postalCode: $('#postalCode').val(),
             country: $('#country').val(),
-            progress: $('#slider-digs').val()
+            progress: $('.range').val() // Progress bar value
         };
+
+        // Log the form data for debugging or further processing
         console.log('Form Data Submitted:', formData);
 
+        // Show an alert message for successful form submission
         alert('Form submitted successfully!');
-        // : Clear form fields after submission
-        $('#inquiryForm')[0].reset();
+
+        // Reset the form and progress bar
+        $('#inquiryForm')[0].reset(); // Clear form fields
+        $('.range').val(0); // Reset the progress bar
+    });
+
+    // Update progress bar live on input
+    $('.range').on('input', function () {
+        const value = $(this).val();
     });
 });
-//Code End
